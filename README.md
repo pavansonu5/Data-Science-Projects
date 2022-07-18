@@ -17,9 +17,23 @@ The purpose of marketing campaigns is to help organizations improve financial po
 * Dataset contains 11 variables, which includes measurements, cut, color, clarity, depth, table.
 * Created custom functions for visualization for both numeirc and categorical variables(these functions can be fit to any dataset)
 * Dataset has no null values. From the boxplots, it can be observed some variables have extreme values(might be outliers).
-* Categorical variables are converted to numeric data based on data description.
-* Finally, applied 7 different machine learning algorithms along with cross-validation. Based on the results(metrics=MSE), xgb REGRESSOR has low MSE valye.
-4. [Cognitive Vehicular Networks](https://github.com/pavansonu5/Data-Science-Projects/tree/main/Cognitive-Vehicular-Networks)
+* Categorical variables are converted to numeric data based on data description(or can also use labelencoder).
+* Finally, applied 7 different machine learning algorithms along with cross-validation. Based on the results(metrics=MSE), xgb REGRESSOR has low MSE value. Final result was R^2=98.3% 
+3. [Cognitive Vehicular Networks](https://github.com/pavansonu5/Data-Science-Projects/tree/main/Cognitive-Vehicular-Networks)
+
 5. [MNIST using different models](https://github.com/pavansonu5/Data-Science-Projects/tree/main/MNIST_CNN)
+#### Implementation and Observations
+* Two different models along with LeNet-5 architecture are used for implementations.
+* These 3 mddels are compared for different optimizers(Adam, Nadam, RMSprop), Training time, batch_size and observed  that all models provide atleast 98% accuracy on test data with min epochs=5, learning rate=0.0005.
+* As we increase epochs, accuracy reaches upto 99.5% but LeNet-5 training time is less compared to other models, as it has less number of units in each layer.
+
 6. [Spaceship Titanic Complete Analysis](https://github.com/pavansonu5/Data-Science-Projects/tree/main/Spaceship-Titanic)
+* In kaggle, there is high competition on this dataset, around 2000 teams were participated. Through this dataset I have gained knowledge of preprocessing steps in different ways.
+* This dataset has null values of around 2000 combinedly. Instead of filling null values using mean, median or most-frequent, relation between variables are used to fill nan- values.
+* For remaining data, custom functions were designed to fill null values.
+* Created new variables using already existing variables Ex: Numerical data was converted into categorical data with same bin size, to check how the variable is effecting the output.
+* Using GridSearchCV and RandomizedSearchCV, implemented different algorithms(Random Forest Classifier and XGBoost Classifer).
+* Output Accuracy was around 81%.
+
 7. [Temparature Time Series Forecasting](https://github.com/pavansonu5/Data-Science-Projects/tree/main/Temperature-Time-Series-Forecasting)
+
